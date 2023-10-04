@@ -1,0 +1,158 @@
+*
+{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.navigationMenu
+{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-left: 2em;
+padding-bottom: 1em;
+padding-right: 2em;
+padding-top: 1em;
+background-color: #08313A;    
+}
+
+.navigationMenu .Logo
+{
+    width: 20em;
+    border: 0.1em solid #fff;
+    
+}
+
+.navigationMenu img
+{
+    outline: 0.1em solid #fff;
+    outline-offset: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in;
+
+}
+
+.navigationMenu .Logo:hover img
+{
+    outline-offset: -1em;
+    box-shadow: 0 0 20px #fff;
+}
+
+.navigationMenu ul
+{
+    list-style: none;
+    display: flex;
+    gap: 2em;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}
+
+.navigationMenu ul li
+{
+    position: relative;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.navigationMenu ul li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigationMenu ul li a:before,
+.navigationMenu ul li a::after
+{
+content: "";
+position: absolute;
+inset: 0.3em;
+background-color: #fff;
+transition: all 0.3s ease-in-out;
+}
+
+
+.navigationMenu ul li a span
+{
+    position: relative;
+    z-index: 10;
+    background-color: #08313A;
+    color: #fff;
+    text-transform: uppercase;
+    border: 0.2em solid rgba(255,255,255, 0.1);
+    padding: 0.2em;
+    overflow: hidden;
+}
+
+.navigationMenu ul li a span::before
+{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 255, 155, 0.1);
+    transform: skew(25deg);
+}
+
+.navigationMenu ul li a:hover:before
+{
+    inset: -0.1em;
+}
+
+.navigationMenu ul li a:hover::after
+{
+    filter: blur(15px);
+}
+
+.navigationMenu ul li a::before
+{
+    background: linear-gradient(45deg, silver, dimgrey, shite);
+}
+/*Styles for FindAdd-page*/
+.FindAdd-page
+{
+    position: relative;
+    left: 0;
+    width: 100%;
+    
+}
+
+.FindAdd-page .InputBox
+{
+    width: 100%;
+    
+    padding: 1em;
+}
+
+.FindAdd-page .InputBox input[type="text"]
+{
+    outline: none;
+    border: none;
+    background-color: #08313A;
+    padding: 0.5em;
+    width: 25%;
+color: #fff;
+font-size: 1.5rem;
+transition: all 0.3s ease-in-out;
+}
+
+.FindAdd-page .InputBox input[type="text"]:focus
+{
+    outline: 0.1em solid rgba(0255,255,255,0.9);
+    outline-offset: -0.2em;
+box-shadow: 0 0 30px #08313A;
+}
+
